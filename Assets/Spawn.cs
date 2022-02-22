@@ -9,13 +9,13 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Spawning();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Spawning();
+        
     }
     void Spawning()
     {
