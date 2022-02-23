@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,34 +7,42 @@ public class TimeManager : MonoBehaviour
 {
     // Start is called before the first frame update
     private Rigidbody rigid;
+    Vector3 archiveSpeed;
+    float lerpT;
+    float timeDest;
 
     void Awake()
     {
         rigid = gameObject.GetComponent<Rigidbody>();
         Time.timeScale = 0.01f;
+        archiveSpeed = Vector3.zero;
     }
 
-    // Update is called once per frame
-    void Update()
+    float sigmoid(int x)
     {
-        if (rigid.velocity != Vector3.zero)
+        int e = 2;
+        if (x == 0)
         {
-            if (Time.timeScale < 0.5f)
-            {
-                Time.timeScale *= 2;
-            }
-            else
-            {
-                Time.timeScale = 1f;
-            }
-        }
-        else if (Time.timeScale >= 0.002f)
-        {
-            Time.timeScale /= 2;
+            return 0.01F;
         }
         else
         {
-            Time.timeScale = 0.001f;
+            return (float) (Math.Pow(e,x) / (Math.Pow(e, x) + 1));
+        }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if ((rigid.velocity - archiveSpeed).magnitude >= 1)
+        {
+            lerpT = .1F;
+            timeDest = sigmoid((int) rigid.velocity.magnitude);
+            Time.timeScale = Mathf.Lerp(Time.timeScale, timeDest, lerpT);
+        }
+        else
+        {
+            lerpT += .1F;
+            Time.timeScale = Mathf.Lerp(Time.timeScale, timeDest, lerpT);
         }
     }
 }
