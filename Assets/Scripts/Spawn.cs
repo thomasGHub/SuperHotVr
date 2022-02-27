@@ -25,5 +25,7 @@ public class Spawn : MonoBehaviour
                  new Vector3(0f,0f,0f),
                  Quaternion.Euler(new Vector3(0f, 0f, 0f))
                 );
+
     }
+
 }
