@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
     void laserStart(InputAction.CallbackContext context)
     {
-        var projectile = Instantiate(laser, transform.position + new Vector3(0,-0.5f,0), Quaternion.Euler(90f, 0f, 0f));
+        var projectile = Instantiate(laser, transform.position + new Vector3(0,-0.2f,0), Quaternion.identity);
         projectile.velocity = transform.forward * shootSpeed;
         Destroy(projectile.gameObject, 1f);
     }
