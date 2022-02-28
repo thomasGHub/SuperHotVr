@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3471232145138392798}
   - component: {fileID: 157931076932489350}
   - component: {fileID: -4163626814748752170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beretta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,6 +53,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b1971e2f4cf334ab9a7419b605667a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 40
+  bullet: {fileID: 0}
+  barrel: {fileID: 0}
 --- !u!54 &3471232145138392798
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -208,7 +211,7 @@ GameObject:
   - component: {fileID: 499652216908017489}
   - component: {fileID: 8251332184748807574}
   - component: {fileID: 8090209361873561333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stvol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +292,7 @@ GameObject:
   - component: {fileID: 8318337806954634058}
   - component: {fileID: 942504855729717824}
   - component: {fileID: 6379274602856863717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Kurok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +373,7 @@ GameObject:
   - component: {fileID: 2936845889939904477}
   - component: {fileID: 6254631950703610843}
   - component: {fileID: 3704549758389452811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Korpus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +454,7 @@ GameObject:
   - component: {fileID: 4710017466388221998}
   - component: {fileID: 9066891806927696539}
   - component: {fileID: 1248474509516417204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Knopka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +535,7 @@ GameObject:
   - component: {fileID: 8124304338763431583}
   - component: {fileID: 5443010418820319033}
   - component: {fileID: 3206464861459454670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Zatvor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +616,7 @@ GameObject:
   - component: {fileID: 6586546575866932933}
   - component: {fileID: 529219757440858552}
   - component: {fileID: 3113642773392595647}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Magazin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +697,7 @@ GameObject:
   - component: {fileID: 7939702608195453728}
   - component: {fileID: 4270025990058106724}
   - component: {fileID: 2597794847433843665}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Kru4ok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
