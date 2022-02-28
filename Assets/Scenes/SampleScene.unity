@@ -423,25 +423,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1703006991 stripped
+--- !u!1 &1981165362 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4116761089854613251, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7304683412201283615, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
   m_PrefabInstance: {fileID: 4116761090233600626}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1703006992
+--- !u!114 &1981165363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703006991}
+  m_GameObject: {fileID: 1981165362}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dacc11a8cb2f3747a9b23ece208ef6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 438973631361729732, guid: 24779589d487ab04eab30ef3b3b5d28b, type: 3}
-  shootSpeed: 10
+  shootSpeed: 300
 --- !u!1001 &438973632093340612
 PrefabInstance:
   m_ObjectHideFlags: 0
