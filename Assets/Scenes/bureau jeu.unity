@@ -12017,12 +12017,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6800299742645982812, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: rightHand
+      value: 
+      objectReference: {fileID: 2115715979}
+    - target: {fileID: 6800299742645982812, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: distanceLaser
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6800299744102069039, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
       propertyPath: m_Name
       value: XRRig
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+--- !u!4 &2115715979 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3346934302841205630, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+  m_PrefabInstance: {fileID: 2115715978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2120899665
 PrefabInstance:
   m_ObjectHideFlags: 0

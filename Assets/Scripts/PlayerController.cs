@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
     private PlayerInputAction playerInputAction;
     public Rigidbody laser;
     public float shootSpeed = 300;
-
+    public Transform rightHand;
+    public float distanceLaser = 1f;
     private void Awake()
     {
         playerInputAction = new PlayerInputAction();
@@ -28,8 +29,12 @@ public class PlayerController : MonoBehaviour
 
     void laserStart(InputAction.CallbackContext context)
     {
-        var projectile = Instantiate(laser, transform.position + new Vector3(0,-0.2f,0), Quaternion.identity);
-        projectile.velocity = transform.forward * shootSpeed;
-        Destroy(projectile.gameObject, 1f);
+        float dist = Vector3.Distance(rightHand.position, transform.position);
+        if (dist < distanceLaser)
+        {
+            var projectile = Instantiate(laser, transform.position + new Vector3(0, -0.2f, 0), Quaternion.identity);
+            projectile.velocity = transform.forward * shootSpeed;
+            Destroy(projectile.gameObject, 1f);
+        }
     }
 }
