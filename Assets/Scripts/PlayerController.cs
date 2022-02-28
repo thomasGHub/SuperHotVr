@@ -8,23 +8,28 @@ public class PlayerController : MonoBehaviour
     private PlayerInputAction playerInputAction;
     public Rigidbody laser;
     public float shootSpeed = 300;
-    void Update()
+
+    private void Awake()
     {
-        if (Input.GetMouseButton(0))
-        {
-            laserStart();
-            Debug.Log("oui");
-        }
+        playerInputAction = new PlayerInputAction();
+
     }
 
-    void laserStart()
+    private void OnEnable()
     {
-        var projectile = Instantiate(laser, transform.position, Quaternion.Euler(90f, 0f, 0f));
+        playerInputAction.Player.Newaction.Enable();
+        playerInputAction.Player.Newaction.performed += laserStart;
+    }
+
+    private void OnDisable()
+    {
+        playerInputAction.Player.Newaction.Disable();
+    }
+
+    void laserStart(InputAction.CallbackContext context)
+    {
+        var projectile = Instantiate(laser, transform.position + new Vector3(0,-0.5f,0), Quaternion.Euler(90f, 0f, 0f));
         projectile.velocity = transform.forward * shootSpeed;
         Destroy(projectile.gameObject, 1f);
     }
-
-
-
-
 }
