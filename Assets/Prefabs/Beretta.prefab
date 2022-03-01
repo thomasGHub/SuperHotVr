@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &358828399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 358828400}
+  m_Layer: 8
+  m_Name: barrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &358828400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358828399}
+  m_LocalRotation: {x: -0, y: -0.71040803, z: -0, w: 0.70379007}
+  m_LocalPosition: {x: -0.152, y: 0, z: -0.0573}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 925022845674164606}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: -90.536, z: 0}
+--- !u!1 &782226884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782226885}
+  m_Layer: 8
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782226885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782226884}
+  m_LocalRotation: {x: -0.42552, y: -0.42552006, z: 0.5647413, w: 0.56474125}
+  m_LocalPosition: {x: 0.036, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 925022845674164606}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: -73.994, z: 90}
 --- !u!1 &548744040241679300
 GameObject:
   m_ObjectHideFlags: 0
@@ -38,6 +98,8 @@ Transform:
   - {fileID: 6586546575866932933}
   - {fileID: 499652216908017489}
   - {fileID: 8124304338763431583}
+  - {fileID: 782226885}
+  - {fileID: 358828400}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54,8 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
-  bullet: {fileID: 0}
-  barrel: {fileID: 0}
+  bullet: {fileID: 160430568738040029, guid: 31327275f0c5a474581351f8901100ba, type: 3}
+  barrel: {fileID: 358828400}
 --- !u!54 &3471232145138392798
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -90,7 +152,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4294967295
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -119,7 +181,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -927206188794964512}
+        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
+        m_MethodName: Fire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -150,7 +224,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 782226885}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -198,8 +272,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.27837944, y: 0.09246796, z: 0.211133}
-  m_Center: {x: -0.040171623, y: 0.008599669, z: 0.0020298958}
+  m_Size: {x: 0.29370818, y: 0.08416438, z: 0.22243798}
+  m_Center: {x: -0.03656079, y: 0.0018844604, z: 0.003181547}
 --- !u!1 &1178566184945126616
 GameObject:
   m_ObjectHideFlags: 0
