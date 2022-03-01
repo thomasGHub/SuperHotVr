@@ -308,10 +308,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dacc11a8cb2f3747a9b23ece208ef6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser: {fileID: 438973631361729732, guid: 24779589d487ab04eab30ef3b3b5d28b, type: 3}
-  menu: {fileID: 0}
+  laser: {fileID: 438973631361729851, guid: 24779589d487ab04eab30ef3b3b5d28b, type: 3}
+  menu: {fileID: 2974460909113876922, guid: 3410a37c7735ba045acb20b3fe3e1e6b, type: 3}
   shootSpeed: 10
-  rightHand: {fileID: 0}
+  rightHand: {fileID: 3346934302841205630}
   distanceLaser: 1
 --- !u!135 &5466008726864610744
 SphereCollider:
