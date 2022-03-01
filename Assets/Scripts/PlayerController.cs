@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         playerInputAction = new PlayerInputAction();
-
     }
 
     private void OnEnable()
@@ -47,6 +46,6 @@ public class PlayerController : MonoBehaviour
     void MenuActive(InputAction.CallbackContext context)
     {
         var menuVar = Instantiate(menu);
+        Destroy(menuVar, 2f);
     }
-
 }
