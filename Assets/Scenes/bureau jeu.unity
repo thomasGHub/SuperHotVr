@@ -15215,6 +15215,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 254066622952939181, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 586069937}
+    - target: {fileID: 254066622952939181, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_SelectActionTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2964921622624561086, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -15262,6 +15270,14 @@ PrefabInstance:
     - target: {fileID: 6800299744102069039, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
       propertyPath: m_Name
       value: XRRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711403187366022841, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 586069937}
+    - target: {fileID: 7711403187366022841, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_SelectActionTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
