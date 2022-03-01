@@ -35,6 +35,24 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Menu"",
+                    ""type"": ""Value"",
+                    ""id"": ""b491df71-e727-4575-8257-c20bf0081a5f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""DesactiveMenu"",
+                    ""type"": ""Value"",
+                    ""id"": ""7cc95b54-d175-4eb1-b3f0-a0f25ec3ebd2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -48,6 +66,28 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13da3b3b-a64e-423c-9247-a2002ce40b00"",
+                    ""path"": ""<XRController>{RightHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c1b58d16-6cbf-4596-8cbc-c074a8cd4399"",
+                    ""path"": ""<XRController>{LeftHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DesactiveMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +97,8 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Newaction = m_Player.FindAction("New action", throwIfNotFound: true);
+        m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
+        m_Player_DesactiveMenu = m_Player.FindAction("DesactiveMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -117,11 +159,15 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Newaction;
+    private readonly InputAction m_Player_Menu;
+    private readonly InputAction m_Player_DesactiveMenu;
     public struct PlayerActions
     {
         private @PlayerInputAction m_Wrapper;
         public PlayerActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @Newaction => m_Wrapper.m_Player_Newaction;
+        public InputAction @Menu => m_Wrapper.m_Player_Menu;
+        public InputAction @DesactiveMenu => m_Wrapper.m_Player_DesactiveMenu;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -134,6 +180,12 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @Newaction.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNewaction;
                 @Newaction.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNewaction;
                 @Newaction.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNewaction;
+                @Menu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMenu;
+                @Menu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMenu;
+                @Menu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMenu;
+                @DesactiveMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDesactiveMenu;
+                @DesactiveMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDesactiveMenu;
+                @DesactiveMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDesactiveMenu;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -141,6 +193,12 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @Newaction.started += instance.OnNewaction;
                 @Newaction.performed += instance.OnNewaction;
                 @Newaction.canceled += instance.OnNewaction;
+                @Menu.started += instance.OnMenu;
+                @Menu.performed += instance.OnMenu;
+                @Menu.canceled += instance.OnMenu;
+                @DesactiveMenu.started += instance.OnDesactiveMenu;
+                @DesactiveMenu.performed += instance.OnDesactiveMenu;
+                @DesactiveMenu.canceled += instance.OnDesactiveMenu;
             }
         }
     }
@@ -148,5 +206,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnNewaction(InputAction.CallbackContext context);
+        void OnMenu(InputAction.CallbackContext context);
+        void OnDesactiveMenu(InputAction.CallbackContext context);
     }
 }

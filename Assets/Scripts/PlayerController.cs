@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private PlayerInputAction playerInputAction;
     public Rigidbody laser;
+    public GameObject menu;
     public float shootSpeed = 300;
     public Transform rightHand;
     public float distanceLaser = 1f;
@@ -20,11 +21,15 @@ public class PlayerController : MonoBehaviour
     {
         playerInputAction.Player.Newaction.Enable();
         playerInputAction.Player.Newaction.performed += laserStart;
+        playerInputAction.Player.Menu.Enable();
+        playerInputAction.Player.Menu.performed += MenuActive;
     }
 
     private void OnDisable()
     {
         playerInputAction.Player.Newaction.Disable();
+        playerInputAction.Player.Menu.Disable();
+
     }
 
     void laserStart(InputAction.CallbackContext context)
@@ -37,4 +42,10 @@ public class PlayerController : MonoBehaviour
             Destroy(projectile.gameObject, 1f);
         }
     }
+
+    void MenuActive(InputAction.CallbackContext context)
+    {
+        var menuVar = Instantiate(menu);
+    }
+
 }
