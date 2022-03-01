@@ -15272,6 +15272,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2974460909113876922, guid: 3410a37c7735ba045acb20b3fe3e1e6b, type: 3}
     - target: {fileID: 6800299742645982812, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: laser
+      value: 
+      objectReference: {fileID: 438973631361729851, guid: 24779589d487ab04eab30ef3b3b5d28b, type: 3}
+    - target: {fileID: 6800299742645982812, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
       propertyPath: rightHand
       value: 
       objectReference: {fileID: 2115715979}
