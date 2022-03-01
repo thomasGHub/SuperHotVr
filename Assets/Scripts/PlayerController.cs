@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(dist);
         if (dist < distanceLaser)
         {
-            var projectile = Instantiate(laser, transform.position + new Vector3(0, -0.2f, 0), Quaternion.identity);
+            var projectile = Instantiate(laser, transform.position + new Vector3(0.5f, -0.2f, 0), Quaternion.identity);
             projectile.GetComponent<Rigidbody>().velocity = transform.forward * shootSpeed;
             Destroy(projectile.gameObject, 1f);
         }

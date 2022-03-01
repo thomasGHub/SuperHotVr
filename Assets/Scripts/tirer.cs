@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class tirer : MonoBehaviour
-{   [SerializeField] private GameObject cible;
+{   [SerializeField] public GameObject cible;
     [SerializeField] private GameObject munition;
     [SerializeField] private Transform munitionParent;
     [SerializeField] private float puissancedefeu = 1f;
@@ -39,6 +39,6 @@ public class tirer : MonoBehaviour
                 munitionParent
                 );
         munition_spawn.GetComponent<Rigidbody>().AddForce(transform.forward * puissancedefeu);
-
+        Destroy(munition_spawn, 2f);
     }
 }
