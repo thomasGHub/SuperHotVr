@@ -11973,6 +11973,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1776799156137871576, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2964921622624561086, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12016,6 +12020,30 @@ PrefabInstance:
     - target: {fileID: 2964921622624561086, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881704987499031854, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_PositionInput.m_Action.m_Id
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881704987499031854, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_RotationInput.m_Action.m_Id
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881704987499031854, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_PositionInput.m_Action.m_SingletonActionBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881704987499031854, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_RotationInput.m_Action.m_SingletonActionBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881704987499031854, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_PositionInput.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881704987499031854, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
+      propertyPath: m_RotationInput.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6800299744102069039, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
       propertyPath: m_Name
