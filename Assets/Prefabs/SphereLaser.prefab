@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 438973631361729734}
   - component: {fileID: 438973631361729733}
   - component: {fileID: 438973631361729732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SphereLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9067372477764837682}
   - component: {fileID: 538497649876511224}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
