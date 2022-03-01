@@ -4,21 +4,41 @@ using UnityEngine;
 
 public class tirer : MonoBehaviour
 {   [SerializeField] private GameObject cible;
-    [SerializeField] private GameObject arme;
-    private float dist;
+    [SerializeField] private GameObject munition;
+    [SerializeField] private Transform munitionParent;
+    [SerializeField] private float puissancedefeu = 1f;
+    [SerializeField] private int dps;
     // Start is called before the first frame update
     void Start()
     {
-       dist = Vector3.Distance(cible.transform.position, transform.position);
+        cibler();
     }
 
     // Update is called once per frame
     void Update()
-    {
-        dist = Vector3.Distance(cible.transform.position, transform.position);
-        if (dist < 20)
+    {   dps += 1;
+       
+        if (dps == 300)
         {
-
+            shoot();
+            dps = 0;
         }
+    }
+
+    void cibler()
+    {
+        Vector3 dir = (cible.transform.position - this.transform.position).normalized;
+        transform.Rotate(dir);
+    }
+    void shoot()
+    {
+        GameObject munition_spawn = Instantiate(
+                munition,
+                transform.position,
+                Quaternion.identity,
+                munitionParent
+                );
+        munition_spawn.GetComponent<Rigidbody>().AddForce(transform.forward * puissancedefeu);
+
     }
 }

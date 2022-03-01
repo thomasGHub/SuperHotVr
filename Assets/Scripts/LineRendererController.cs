@@ -53,6 +53,7 @@ public class LineRendererController : MonoBehaviour
         }
         rend.SetPositions(points);
         rend.material.color = rend.startColor;
+        return hitBtn;
     }
     private void Update()
     {

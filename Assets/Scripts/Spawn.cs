@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
     public static Spawn instance;
     [SerializeField] GameObject ennemy;
     public List<Transform> spawnPos = new List<Transform>();
-    GameObject enemy;
+    GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {
