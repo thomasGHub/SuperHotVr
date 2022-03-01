@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
+    public static Spawn instance;
     [SerializeField] GameObject ennemy;
-
+    public List<Transform> spawnPos = new List<Transform>();
+    GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         Spawning();
     }
 
@@ -17,12 +20,13 @@ public class Spawn : MonoBehaviour
     {
         
     }
-    void Spawning()
+    public void Spawning()
     {
-        Instantiate
+        int rand = Random.Range(0, spawnPos.Count);
+        enemy = Instantiate
                 (
                 ennemy,
-                 new Vector3(0f,0f,0f),
+                 spawnPos[rand].position,
                  Quaternion.Euler(new Vector3(0f, 0f, 0f))
                 );
     }
