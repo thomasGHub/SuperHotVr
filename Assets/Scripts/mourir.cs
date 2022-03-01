@@ -19,7 +19,8 @@ public class mourir : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.layer == armelayer)
-        {   
+        {
+            Spawn.instance.Spawning();
             Destroy(gameObject); }
     }
 
