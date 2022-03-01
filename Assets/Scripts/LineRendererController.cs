@@ -30,7 +30,7 @@ public class LineRendererController : MonoBehaviour
     }
 
     public LayerMask layerMask;
-    public void AlignLineRenderer(LineRenderer rend)
+    public bool AlignLineRenderer(LineRenderer rend)
     {
         bool hitBtn = false;
         Ray ray;
