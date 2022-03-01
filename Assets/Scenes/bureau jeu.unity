@@ -12027,7 +12027,7 @@ PrefabInstance:
       objectReference: {fileID: 2115715979}
     - target: {fileID: 6800299742645982812, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
       propertyPath: distanceLaser
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6800299744102069039, guid: 35b71a3dcb59f9e4fb1cec8da6d59282, type: 3}
       propertyPath: m_Name

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private PlayerInputAction playerInputAction;
-    public Rigidbody laser;
+    public GameObject laser;
     public GameObject menu;
     public float shootSpeed = 300;
     public Transform rightHand;
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         if (dist < distanceLaser)
         {
             var projectile = Instantiate(laser, transform.position + new Vector3(0, -0.2f, 0), Quaternion.identity);
-            projectile.velocity = transform.forward * shootSpeed;
+            projectile.GetComponent<Rigidbody>().velocity = transform.forward * shootSpeed;
             Destroy(projectile.gameObject, 1f);
         }
     }
