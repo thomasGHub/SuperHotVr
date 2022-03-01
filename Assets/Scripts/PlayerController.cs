@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     void laserStart(InputAction.CallbackContext context)
     {
         float dist = Vector3.Distance(rightHand.position, transform.position);
+        Debug.Log(dist);
         if (dist < distanceLaser)
         {
             var projectile = Instantiate(laser, transform.position + new Vector3(0, -0.2f, 0), Quaternion.identity);
